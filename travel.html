@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guide App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #bf1a1a7a;
+        }
+        #travel-app {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        #travel-app h1 {
+            margin-top: 0;
+        }
+        .filter {
+            margin-bottom: 20px;
+        }
+        .destination {
+            padding: 10px;
+            background: #f9f9f9;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        .destination:last-child {
+            border-bottom: none;
+        }
+        .destination-details {
+            display: none;
+            padding: 10px;
+            background: #f1f1f1;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="travel-app">
+        <h1>Travel Guide</h1>
+        <div class="filter">
+            <label for="category-filter">Filter by category: </label>
+            <select id="category-filter">
+                <option value="all">All</option>
+                <option value="beach">Beach</option>
+                <option value="mountain">Mountain</option>
+                <option value="city">City</option>
+            </select>
+        </div>
+        <div id="destination-list">
+            <!-- Destination items will be inserted here -->
+        </div>
+    </div>
+    <script src="travel.js"></script>
+</body>
+</html>
